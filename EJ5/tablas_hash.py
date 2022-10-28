@@ -24,7 +24,9 @@ class Hash(object):
         '''Chequea que no hay caracteres prohibidos'''
         c=ord(dato)
         if(c<32 or c>132):
-            return Exception(f'El caracter {dato} no es valido, utilice otro')
+            return False
+        else:
+            return True
 
     def crear_tabla(self,tamanio):
         self.tabla=[None]*tamanio

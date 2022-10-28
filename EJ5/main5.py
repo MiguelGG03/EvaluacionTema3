@@ -12,6 +12,7 @@ def main5():
     cont=0
     for i in mensaje:
         h=encript.encriptador(i)
+        
         encript.agregar(tabla,h,cont)
         cont+=1
     '''A partir de aqui tengo una tabla en la que 
