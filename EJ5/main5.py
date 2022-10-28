@@ -1,5 +1,8 @@
 from tablas_hash import Hash
 
+def sl():
+    print('\n')
+
 def main5():
     mensaje=input('Mensaje a encriptar\n>>>')
     encript=Hash()
@@ -13,7 +16,9 @@ def main5():
         cont+=1
     '''A partir de aqui tengo una tabla en la que 
     cada casilla representa un caracter encriptado'''
+    sl()
     print('Datos encriptados en lista >>> ',tabla)
+    sl()
 
 
 
