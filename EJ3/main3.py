@@ -1,4 +1,4 @@
-from clasesej3 import (Nave,HalconMilenario,EstrellaDeLaMuerte)
+from clasesej3 import (HalconMilenario,EstrellaDeLaMuerte)
 
 def main3():
     ds=EstrellaDeLaMuerte()
