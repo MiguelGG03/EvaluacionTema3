@@ -14,7 +14,17 @@ class Hash(object):
     def encriptador(self,dato):
         '''Encripta el texto'''
         resultado=int(hashlib.sha256(dato.encode('utf-8')).hexdigest(), 16) % 10**8
-        return resultado  
+        return resultado 
+
+    def desencriptador(self,dato):
+        resultado=int(hashlib.sha256(dato.encode('utf-8')).hexdigest(), 16) % 10**8
+        return resultado 
+
+    def checker(self,dato):
+        '''Chequea que no hay caracteres prohibidos'''
+        c=ord(dato)
+        if(c<32 or c>132):
+            return Exception(f'El caracter {dato} no es valido, utilice otro')
 
     def crear_tabla(self,tamanio):
         self.tabla=[None]*tamanio
