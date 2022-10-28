@@ -22,7 +22,8 @@ class EstrellaDeLaMuerte:
         self.nave2=Nave(600,6,5000)
         self.nave3=Nave(750,40,1050)
         self.nave4=Nave(1100,2,500)
-        self.listadonaves=[self.nave1,self.nave2,self.nave3,self.nave4]
+        self.nave5=Nave(100,10,1000)
+        self.listadonaves=[self.nave1,self.nave2,self.nave3,self.nave4,self.nave5]
 
     def __str__(self):
         print('La Estrella de la Muerte consta de 4 naves')
