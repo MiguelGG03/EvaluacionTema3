@@ -10,7 +10,13 @@ class HalconMilenario(Nave):
         self.velocidad=1050
         self.tripulacion=4
         self.transporte=1000
-
+    
+    def __str__(self):
+        print('El Halcon Milenario consta de las siguientes caracteristicas:\n'
+              f'Velocidad maxima >>> {self.velocidad}\n'
+              f'Tripulacion >>> {self.tripulacion}\n'
+              f'Capacidad de transporte >>> {self.transporte}\n')
+        
 class EstrellaDeLaMuerte:
     def __init__(self):
         self.nave1=Nave(1000,3,600)
@@ -20,7 +26,7 @@ class EstrellaDeLaMuerte:
         self.listadonaves=[self.nave1,self.nave2,self.nave3,self.nave4]
 
     def __str__(self):
-        print('El Halcon Milenario consta de 4 naves')
+        print('La Estrella de la Muerte consta de 4 naves')
         for i in self.listadonaves:
             print(f'La nave {i} consta de los siguiente:\n'
                   f'Velocidad maxima >>> {i.velocidad}\n'
