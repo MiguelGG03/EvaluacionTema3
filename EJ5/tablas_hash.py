@@ -1,5 +1,10 @@
 import hashlib
 
+class hashNodo(object):
+
+    info , sig = None , None
+
+
 class Hash(object):
 
     def __init__(self):
@@ -13,6 +18,12 @@ class Hash(object):
             h = h *33 + ord(caracter)
         return h
 
+    def encriptador(self,dato):
+        '''Encripta el texto'''
+        resultado=int(hashlib.sha256(dato.encode('utf-8')).hexdigest(), 16) % 10**8
+        return resultado
+    
+
     def crear_tabla(self,tamanio):
         self.tabla=[None]*tamanio
         self.tamanio=tamanio
@@ -24,19 +35,12 @@ class Hash(object):
     def cantidad_elementos(self):
         return self.tamanio-self.tabla.count(None)
 
-    def funcion_hash(self,dato):
-        '''Posicion del dato en la tabla'''
-        return self.bernstein(str(dato))% self.tamanio
-    
-    def agregar(self,tabla,dato):
+    def agregar(self,tabla,dato,posicion):
         '''Agrega un elemento a la tabla'''
-        posicion=self.funcion_hash(dato)
-        aux=hashNodo()
-        aux.info=dato
         
         if(tabla[posicion] is None):
-            tabla[posicion]=aux
-            print(f'{aux.info} instertado con exito a la tabla')
+            tabla[posicion]=dato
+            print(f'{dato} instertado con exito a la tabla en la posicion {posicion}')
             self.tabla=tabla
         else:
             aux2=tabla[posicion]
