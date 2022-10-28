@@ -12,8 +12,11 @@ def main5():
     cont=0
     for i in mensaje:
         h=encript.encriptador(i)
-        
-        encript.agregar(tabla,h,cont)
+        sn=encript.checker(i)
+        if(sn==True):
+            encript.agregar(tabla,h,cont)
+        else:
+            return Exception(f'Caracter {i} no valido')
         cont+=1
     '''A partir de aqui tengo una tabla en la que 
     cada casilla representa un caracter encriptado'''
