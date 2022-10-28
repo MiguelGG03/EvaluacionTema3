@@ -1,7 +1,4 @@
-class hashNodo(object):
-
-    info , sig = None , None
-
+import hashlib
 
 class Hash(object):
 
