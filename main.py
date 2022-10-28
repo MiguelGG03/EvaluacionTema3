@@ -1,5 +1,5 @@
 from EJ1.main1 import main1
-from EJ5.main2 import main2
+from EJ2.main2 import main2
 from EJ3.main3 import main3
 from EJ5.main5 import main5
 from EJ4.main4 import main4
