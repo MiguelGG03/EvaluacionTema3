@@ -1,6 +1,6 @@
 from clasesej3 import (HalconMilenario,EstrellaDeLaMuerte)
 
-def listador(lista):
+def listador_trip(lista):
     cont=1000000
     for alg in lista:
         if(alg.tripulacion < cont):
@@ -12,7 +12,18 @@ def listador(lista):
     
     return lista
 
-
+def listador_min(lista):
+    cont=0
+    lista_nueva=[]
+    for alg in lista:
+        if(alg.tripmin > cont):
+            cont=alg.tripmin
+    
+    for i in lista:
+        if(i.tripmin==cont):
+            lista_nueva.append(i)
+    
+    return lista_nueva
 
 def main3():
     ds=EstrellaDeLaMuerte()
@@ -29,15 +40,15 @@ def main3():
     print('================================')
     print('NAVES MAYOR NUMERO DE TRIPULACION')
     print('================================\n')
-    lista_trip=listador(lista)
+    lista_trip=listador_trip(lista)
     for i in lista_trip:
         print(f'Tripulacion >>> {i.tripulacion} entes')
     print('\n================================')
     print('NAVES MAYOR NUMERO DE TRIPULACION')
     print('================================\n')
-    lista_trip=listador(lista)
+    lista_trip=listador_min(lista)
     for i in lista_trip:
-        print(f'Tripulacion >>> {i.tripulacion} entes')
+        print(f'Tripulacion minima maxima >>> {i.tripulacion} entes')
     print('\n================================\n')
         
 
