@@ -28,13 +28,12 @@ def main3():
     ds.__str__()
     print('================================')
     print('NAVES MAYOR NUMERO DE TRIPULACION')
+    print('================================\n')
     lista_trip=listador(lista)
     for i in lista_trip:
-        if():
-            i.printa_nave()
-        else:
-            i.__str__()
-
+        print(f'Tripulacion >>> {i.tripulacion} entes')
+    print('\n================================\n')
+        
 
 
 
