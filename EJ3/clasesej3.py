@@ -1,14 +1,16 @@
 class Nave:
-    def __init__(self,velocidad,tripulacion,transporte):
+    def __init__(self,velocidad,tripulacion,transporte,tripmin):
         self.velocidad=velocidad
         self.tripulacion=tripulacion
         self.transporte = transporte
+        self.tripmin=tripmin
 
 class HalconMilenario(Nave):
     def __init__(self):
         self.velocidad=1050
         self.tripulacion=4
         self.transporte=1000
+        self.tripmin=4
     
     def __str__(self):
         print('El Halcon Milenario consta de las siguientes caracteristicas:\n'
@@ -18,11 +20,11 @@ class HalconMilenario(Nave):
         
 class EstrellaDeLaMuerte:
     def __init__(self):
-        self.nave1=Nave(1000,3,600)
-        self.nave2=Nave(600,6,5000)
-        self.nave3=Nave(750,40,1050)
-        self.nave4=Nave(1100,2,500)
-        self.nave5=Nave(100,10,1000)
+        self.nave1=Nave(1000,3,600,2)
+        self.nave2=Nave(600,6,5000,1)
+        self.nave3=Nave(750,40,1050,5)
+        self.nave4=Nave(1100,2,500,6)
+        self.nave5=Nave(100,10,1000,3)
         self.listadonaves=[self.nave1,self.nave2,self.nave3,self.nave4,self.nave5]
 
     def __str__(self):
