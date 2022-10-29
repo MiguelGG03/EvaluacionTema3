@@ -31,4 +31,10 @@ class EstrellaDeLaMuerte:
             print(f'La nave {i} consta de los siguiente:\n'
                   f'Velocidad maxima >>> {i.velocidad} km/h\n'
                   f'Tripulacion >>> {i.tripulacion} entes\n'
-                  f'Capacidad de transporte >>> {i.transporte} kg\n')
+                  f'Capacidad de transporte >>> {i.transporte} kg\n')       
+    
+    def printa_nave(self,nav):
+        print('El Halcon Milenario consta de las siguientes caracteristicas:\n'
+              f'Velocidad maxima >>> {nav.velocidad} km/h\n'
+              f'Tripulacion >>> {nav.tripulacion} entes\n'
+              f'Capacidad de transporte >>> {nav.transporte} kg\n')
