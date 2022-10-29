@@ -1,24 +1,27 @@
 from clasesej3 import (HalconMilenario,EstrellaDeLaMuerte)
 
-def listador(algo):
-    lista=[]
-    hm=HalconMilenario()
-    ds=EstrellaDeLaMuerte()
-    lista.append(ds.nave1)
-    lista.append(ds.nave2)
-    lista.append(ds.nave3)
-    lista.append(ds.nave4)
-    lista.append(ds.nave5)
-    cont=0
-    for i in range(5):
-        if(lista[i].tripulacion<cont):
-            cont=lista[i].tripulacion
+def listador(lista):
+    cont=1000000
+    print(lista)
+    for alg in lista:
+        if(alg.tripulacion < cont):
+            cont=alg.tripulacion
+    
+    for i in lista:
+        if(i.tripulacion==cont):
+            lista.remove(i)
+    
+    print(lista)
+    return lista
+        
+        
 
         
 
 def main3():
     ds=EstrellaDeLaMuerte()
     hm=HalconMilenario()
+    lista_trip=[ds.nave1,ds.nave2,ds.nave3,ds.nave4,ds.nave5,hm]
     print('================================')
     print('HACLON MILENARIO CARACTERISTICAS')
     print('================================\n')
@@ -29,7 +32,7 @@ def main3():
     ds.__str__()
     print('================================')
     print('NAVES MAYOR NUMERO DE TRIPULACION')
-
+    print(listador(lista_trip))
 
 
 
