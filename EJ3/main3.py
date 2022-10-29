@@ -25,6 +25,19 @@ def listador_min(lista):
     
     return lista_nueva
 
+def listador_at(lista):
+    cont=0
+    lista_nueva=[]
+    for alg in lista:
+        if(alg.tripmin > cont):
+            cont=alg.tripmin
+    
+    for i in lista:
+        if(i.tripmin==cont):
+            lista_nueva.append(i)
+    
+    return lista_nueva
+
 def main3():
     ds=EstrellaDeLaMuerte()
     hm=HalconMilenario()
@@ -44,11 +57,17 @@ def main3():
     for i in lista_trip:
         print(f'Tripulacion >>> {i.tripulacion} entes')
     print('\n================================')
-    print('NAVES MAYOR NUMERO DE TRIPULACION')
+    print('NAVES MAYOR NUMERO DE TRIPULACION min')
     print('================================\n')
     lista_trip=listador_min(lista)
     for i in lista_trip:
         print(f'Tripulacion minima maxima >>> {i.tripulacion} entes')
+    print('\n================================')
+    print('NAVES CUYO NOMBRE COMIENZA CON AT')
+    print('================================\n')
+    lista_at=listador_at(lista)
+    for i in lista_at:
+        print(f'Naves que comienzan con AT >>> {i.tripulacion} ')
     print('\n================================\n')
         
 
