@@ -1,4 +1,4 @@
-from clasesej3 import (HalconMilenario,EstrellaDeLaMuerte)
+from clasesej3 import (Nave,HalconMilenario,EstrellaDeLaMuerte)
 
 def listador(lista):
     cont=1000000
@@ -11,8 +11,8 @@ def listador(lista):
             lista.remove(i)
     
     return lista
-    
-            
+
+
 
 def main3():
     ds=EstrellaDeLaMuerte()
@@ -29,6 +29,11 @@ def main3():
     print('================================')
     print('NAVES MAYOR NUMERO DE TRIPULACION')
     lista_trip=listador(lista)
+    for i in lista_trip:
+        if():
+            i.printa_nave()
+        else:
+            i.__str__()
 
 
 
