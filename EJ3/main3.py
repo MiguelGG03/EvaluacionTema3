@@ -105,7 +105,7 @@ def main3():
         print(f'Nombre >>> {i.nombre} ; Pasajeros >>> {i.pasajeros}')
     print()
     print('\n================================')
-    print('NAVES MAS GRANDE Y MAS PEQUEÑA \n   medidas por pasajeros')
+    print('NAVES MAS GRANDE Y MAS PEQUEÑA \n   medidas por tripulacion')
     print('================================\n')
     lista=[ds.nave1,ds.nave2,ds.nave3,ds.nave4,ds.nave5,hm]
     lista_max_y_min=listador_max_min(lista)
