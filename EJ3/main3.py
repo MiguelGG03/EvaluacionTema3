@@ -41,6 +41,25 @@ def listador_min_six(lista):
     
     return lista_nueva
 
+def listador_max_min(lista):
+    lista_nueva=[]
+    
+    contmin=1000000
+    for alg in lista:
+        if(alg.tripulacion < contmin):
+            contmin=alg.tripulacion
+    contmax=0
+    for alg in lista:
+        if(alg.tripulacion > contmax):
+            contmax=alg.tripulacion
+    
+
+    for i in lista:
+        if(i.tripulacion==contmax or i.tripulacion==contmin):
+            lista_nueva.append(i)
+    
+    return lista_nueva
+
 
 
 
@@ -84,6 +103,14 @@ def main3():
     lista_six=listador_min_six(lista)
     for i in lista_six:
         print(f'Nombre >>> {i.nombre} ; Pasajeros >>> {i.pasajeros}')
+    print()
+    print('\n================================')
+    print('NAVES MAS GRANDE Y MAS PEQUEÑA \n   medidas por pasajeros')
+    print('================================\n')
+    lista=[ds.nave1,ds.nave2,ds.nave3,ds.nave4,ds.nave5,hm]
+    lista_max_y_min=listador_max_min(lista)
+    for i in lista_max_y_min:
+        print(f'Nombre >>> {i.nombre}\nPasajeros >>> {i.pasajeros}\nVelocidad >>> {i.velocidad}\nTripulacion >>> {i.tripulacion}\nCarga de Transporte >>> {i.transporte}\nTripulacion Minima >>> {i.tripmin}\n')
     print()
    
 
