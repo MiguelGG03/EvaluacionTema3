@@ -25,7 +25,7 @@ class EstrellaDeLaMuerte:
         self.nave1=Nave('Atleti',1000,3,600,2)
         self.nave2=Nave('La Nevera',600,6,5000,1)
         self.nave3=Nave('Guillermo',750,40,1050,5)
-        self.nave4=Nave('Atreas',1100,2,500,6)
+        self.nave4=Nave('Atras',1100,2,500,6)
         self.nave5=Nave('Victoria',100,10,1000,3)
         self.listadonaves=[self.nave1,self.nave2,self.nave3,self.nave4,self.nave5]
 
