@@ -28,12 +28,8 @@ def listador_min(lista):
 def listador_at(lista):
     lista_nueva=[]
     for alg in lista:
-        if(alg.nombre > cont):
-            cont=alg.nombre
-    
-    for i in lista:
-        if(i.nombre==cont):
-            lista_nueva.append(i)
+        if((alg.nombre[0] == 'A' or alg.nombre[0] == 'a') and (alg.nombre[1] == 'T' or alg.nombre[1] == 't')):
+            lista_nueva.append(alg)
     
     return lista_nueva
 
@@ -61,6 +57,14 @@ def main3():
     lista_trip=listador_min(lista)
     for i in lista_trip:
         print(f'Tripulacion minima maxima >>> {i.tripulacion} entes')
+    
+    print('\n================================')
+    print('NAVES CUYO NOMBRE EMPIEZA CON AT')
+    print('================================\n')
+    lista_at=listador_at(lista)
+    for i in lista_at:
+        print(f'Nave que empieza con AT >>> {i.nombre}')
+    print()
    
 
         
