@@ -33,10 +33,10 @@ def listador_at(lista):
     
     return lista_nueva
 
-def listador_trip(lista):
+def listador_min_six(lista):
     lista_nueva=[]
     for alg in lista:
-        if(alg.tripulacion >= 6):
+        if(alg.pasajeros >= 6):
             lista_nueva.append(alg)
     
     return lista_nueva
