@@ -33,6 +33,16 @@ def listador_at(lista):
     
     return lista_nueva
 
+
+
+
+
+
+
+
+
+
+
 def main3():
     ds=EstrellaDeLaMuerte()
     hm=HalconMilenario()
