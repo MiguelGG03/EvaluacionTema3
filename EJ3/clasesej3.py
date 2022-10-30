@@ -25,8 +25,8 @@ class EstrellaDeLaMuerte:
         self.nave1=Nave('Atleti',1000,3,600,2)
         self.nave2=Nave('Atreas',600,6,5000,1)
         self.nave3=Nave('Guillermo',750,40,1050,5)
-        self.nave4=Nave('Atiempo',1100,2,500,6)
-        self.nave5=Nave('La Nevera',100,10,1000,3)
+        self.nave4=Nave('La Nevera',1100,2,500,6)
+        self.nave5=Nave('Atiempo',100,10,1000,3)
         self.listadonaves=[self.nave1,self.nave2,self.nave3,self.nave4,self.nave5]
 
     def __str__(self):

@@ -29,7 +29,7 @@ def listador_at(lista):
     lista_nueva=[]
     for alg in lista:
         if(((alg.nombre[0] == 'A') or (alg.nombre[0] == 'a')) and ((alg.nombre[1] == 'T') or (alg.nombre[1] == 't'))):
-            lista_nueva.append(alg)
+           lista_nueva.append(alg)
     
     return lista_nueva
 
@@ -51,6 +51,7 @@ def main3():
     lista_trip=listador_trip(lista)
     for i in lista_trip:
         print(f'Tripulacion >>> {i.tripulacion} entes')
+    lista=[ds.nave1,ds.nave2,ds.nave3,ds.nave4,ds.nave5,hm]
     print('\n================================')
     print('NAVES MAYOR NUMERO DE TRIPULACION min')
     print('================================\n')
@@ -61,6 +62,7 @@ def main3():
     print('\n================================')
     print('NAVES CUYO NOMBRE EMPIEZA CON AT')
     print('================================\n')
+    lista=[ds.nave1,ds.nave2,ds.nave3,ds.nave4,ds.nave5,hm]
     lista_at=listador_at(lista)
     for i in lista_at:
         print(f'Nave que empieza con AT >>> {i.nombre}')
