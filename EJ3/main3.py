@@ -77,6 +77,13 @@ def main3():
     lista_at=listador_at(lista)
     for i in lista_at:
         print(f'Nave que empieza con AT >>> {i.nombre}')
+    print('\n================================')
+    print('NAVES MINIMO SEIS PASAJEROS')
+    print('================================\n')
+    lista=[ds.nave1,ds.nave2,ds.nave3,ds.nave4,ds.nave5,hm]
+    lista_six=listador_min_six(lista)
+    for i in lista_six:
+        print(f'Nombre >>> {i.nombre} ; Pasajeros >>> {i.pasajeros}')
     print()
    
 
