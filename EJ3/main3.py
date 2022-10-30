@@ -28,7 +28,7 @@ def listador_min(lista):
 def listador_at(lista):
     lista_nueva=[]
     for alg in lista:
-        if((alg.nombre[0] == 'A' or alg.nombre[0] == 'a') and (alg.nombre[1] == 'T' or alg.nombre[1] == 't')):
+        if(((alg.nombre[0] == 'A') or (alg.nombre[0] == 'a')) and ((alg.nombre[1] == 'T') or (alg.nombre[1] == 't'))):
             lista_nueva.append(alg)
     
     return lista_nueva
