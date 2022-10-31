@@ -24,8 +24,6 @@ def main5():
         if(valido(i)):
             encript.agregar(tabla,encript.encriptador(i),cont)
             cont+=1
-        else:
-            return Exception(f'Caracter {i} no valido')
         
     
     
