@@ -42,6 +42,15 @@ def main5():
     sl()
 
     '''Ahora toca desencriptar'''
+    lista_desencrptada=[]
+    for i in tabla:
+        for j in range(32,126):
+            if(encript.encriptador(chr(j))==i):
+                lista_desencrptada.append(chr(j))
+    separador=''
+    x=separador.join(lista_desencrptada)
+    
+    print(f'Mensaje desencriptado >>> {x}')
     
 
 
