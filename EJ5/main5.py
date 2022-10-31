@@ -12,8 +12,6 @@ def sl():
     print('\n')
 
 def main5():
-    h='hola'
-    h1=int(hashlib.sha256(h.encode('utf-8')).hexdigest(),16)
     mensaje=input('Mensaje a encriptar\n>>>')
     encript=Hash()
     tabla=encript.crear_tabla(len(mensaje))
