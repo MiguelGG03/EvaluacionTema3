@@ -47,7 +47,8 @@ def main5():
                 lista_desencrptada.append(chr(j))
     separador=''
     x=separador.join(lista_desencrptada)
-    
+    print(f'Tabla de elementos encriptados >>> {lista_desencrptada}')
+    print()    
     print(f'Mensaje desencriptado >>> {x}')
     
 
