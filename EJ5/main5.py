@@ -12,7 +12,7 @@ def sl():
     print('\n')
 
 def main5():
-    mensaje=input('Mensaje a encriptar\n>>>')
+    mensaje=input('Mensaje a encriptar\n>>> ')
     encript=Hash()
     tabla=encript.crear_tabla(len(mensaje))
     encript.__str__()
