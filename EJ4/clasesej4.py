@@ -42,3 +42,13 @@ def modificar_termino(polinomio,termino,valor):
     while(aux is not None and aux.info.termino!=termino):
         aux=aux.sig
     aux.info.valor=valor
+
+def obtener_valor( polinomio,termino):
+    '''Devuelve el valor de un termino del polinomio'''
+    aux=polinomio.termino_mayor
+    while(aux is not None and aux.info.termino > termino):
+        aux=aux.sig
+    if(aux is not None and aux.info.termino == termino):
+        return aux.info.valor
+    else:
+        return 0
