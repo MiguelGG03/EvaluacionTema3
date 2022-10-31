@@ -103,3 +103,21 @@ def restar(polinomio1,polinomio2):
         if(total!=0):
             agregar_termino(paux,i,total)
         return paux
+
+def dividir(polinomio1,polinomio2):
+    '''Divide dos polinomios y devuelve el resultado'''
+    paux=Polinomio()
+    pol1=polinomio1.termino_mayor
+    while(pol1 is not None):
+        pol2=polinomio2.termino_mayor
+        while(pol2 is not None):
+            termino=pol1.info.termino-pol2.info.termino
+            valor=pol1.info.valor/pol2.info.valor
+            if(obtener_valor(paux, termino)!=0):
+                valor+=obtener_valor(paux,termino)
+                modificar_termino(paux,termino,valor)
+            else:
+                agregar_termino(paux,termino,valor)
+            pol2=pol2.sig
+        pol1=pol1.sig
+    return paux
