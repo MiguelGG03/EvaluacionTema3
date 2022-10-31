@@ -18,3 +18,20 @@ class Polinomio(object):
         self.termino_mayor=None
         self.grado=-1
     
+'''Implementaciones para el polinomio'''
+
+def agregar_termino(polinomio,termino,valor):
+    '''Agregaun termino y su valor al polinomio'''
+    aux=Nodo()
+    dato=datoPolinomio()
+    aux.info=dato
+    if(termino > polinomio.grado):
+        aux.sig= polinomio.termino_mayor
+        polinomio.termino_mator=aux
+        polinomio.grado= termino
+    else:
+        actual= polinomio.termino_mayor
+        while(actual.sig is not None and termino < actual.sig.info.termino):
+            actual=actual.sig
+        aux.sig=actual.sig
+        actual.sig=aux
