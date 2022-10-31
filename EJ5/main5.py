@@ -1,6 +1,13 @@
 import hashlib
 from tablas_hash import Hash
 
+def valido(caracter):
+    if(ord(caracter)<32 or ord(caracter)>125):
+        return print('Caracter no valido')
+    else:
+        pass
+
+
 def sl():
     print('\n')
 

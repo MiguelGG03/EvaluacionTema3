@@ -52,3 +52,6 @@ def obtener_valor( polinomio,termino):
         return aux.info.valor
     else:
         return 0
+
+def mostrar(polinomio):
+    '''Muestra el polinomio'''
