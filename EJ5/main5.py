@@ -25,22 +25,20 @@ def main5():
             encript.agregar(tabla,encript.encriptador(i),cont)
             cont+=1
         
-    
-    
-    '''Ahora toca desencriptar'''
-    #h2=int(hashlib.sha256(h1.encode('utf-8')).hexdigest(),16)
-    #print(h2)
     for i in mensaje:
         if(valido(i)==False):
-            print(f'Caracter {i} no valido'.encode('utf-8'))
+            print(f'Caracter {i} no valido')
         else:
-            print()
+            print(f'Caracter {i} añadido al encriptado con exito')
             
     '''A partir de aqui tengo una tabla en la que 
     cada casilla representa un caracter encriptado'''
     sl()
     print('Datos encriptados en lista >>> ',tabla)
     sl()
+
+    '''Ahora toca desencriptar'''
+    
 
 
 
