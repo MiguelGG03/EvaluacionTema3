@@ -20,14 +20,6 @@ class Hash(object):
         resultado=int(hashlib.sha256(dato.encode('utf-8')).hexdigest(), 16) % 10**8
         return resultado 
 
-    def checker(self,dato):
-        '''Chequea que no hay caracteres prohibidos'''
-        c=ord(dato)
-        if(c<32 or c>132):
-            return False
-        else:
-            return True
-
     def crear_tabla(self,tamanio):
         self.tabla=[None]*tamanio
         self.tamanio=tamanio

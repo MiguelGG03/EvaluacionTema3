@@ -3,9 +3,9 @@ from tablas_hash import Hash
 
 def valido(caracter):
     if(ord(caracter)<32 or ord(caracter)>125):
-        return print('Caracter no valido')
+        return False
     else:
-        return print(f'Caracter valido >>> {caracter}')
+        return True
 
 
 def sl():
@@ -21,23 +21,28 @@ def main5():
     print(encript.encriptador(mensaje))
     cont=0
     for i in mensaje:
-        h=encript.encriptador(i)
-        sn=encript.checker(i)
-        if(sn==True):
-            encript.agregar(tabla,h,cont)
+        if(valido(i)):
+            encript.agregar(tabla,encript.encriptador(i),cont)
+            cont+=1
         else:
             return Exception(f'Caracter {i} no valido')
-        cont+=1
+        
+    
+    
+    '''Ahora toca desencriptar'''
+    #h2=int(hashlib.sha256(h1.encode('utf-8')).hexdigest(),16)
+    #print(h2)
+    for i in mensaje:
+        if(valido(i)==False):
+            print(f'Caracter {i} no valido'.encode('utf-8'))
+        else:
+            print()
+            
     '''A partir de aqui tengo una tabla en la que 
     cada casilla representa un caracter encriptado'''
     sl()
     print('Datos encriptados en lista >>> ',tabla)
     sl()
-    '''Ahora toca desencriptar'''
-    #h2=int(hashlib.sha256(h1.encode('utf-8')).hexdigest(),16)
-    #print(h2)
-    for i in mensaje:
-        valido(i)
 
 
 
