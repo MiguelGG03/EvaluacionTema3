@@ -35,3 +35,13 @@ def agregar_termino(polinomio,termino,valor):
             actual=actual.sig
         aux.sig=actual.sig
         actual.sig=aux
+
+def modificar_termino(polinomio,termino,valor):
+    '''Modifica el termino de un polinomio'''
+    aux=polinomio.termino_mayor
+    while(aux is not None and aux.info.termino > termino):
+        aux=aux.sig
+    if(aux is not None and aux.info.termino == termino):
+        return aux.info.valor
+    else:
+        return 0
