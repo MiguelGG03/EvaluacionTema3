@@ -5,7 +5,7 @@ def valido(caracter):
     if(ord(caracter)<32 or ord(caracter)>125):
         return print('Caracter no valido')
     else:
-        pass
+        return print(f'Caracter valido >>> {caracter}')
 
 
 def sl():
@@ -34,8 +34,10 @@ def main5():
     print('Datos encriptados en lista >>> ',tabla)
     sl()
     '''Ahora toca desencriptar'''
-    h2=int(hashlib.sha256(h1.encode('utf-8')).hexdigest(),16)
-    print(h2)
+    #h2=int(hashlib.sha256(h1.encode('utf-8')).hexdigest(),16)
+    #print(h2)
+    for i in mensaje:
+        valido(i)
 
 
 
