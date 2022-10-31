@@ -24,10 +24,14 @@ def main5():
         if(valido(i)):
             encript.agregar(tabla,encript.encriptador(i),cont)
             cont+=1
+        else:
+            encript.agregar(tabla,encript.encriptador(' '),cont)
+            cont+=1
+
         
     for i in mensaje:
         if(valido(i)==False):
-            print(f'Caracter {i} no valido')
+            print(f'Caracter {i} no valido, sustituido con un espacio ` ´')
         else:
             print(f'Caracter {i} añadido al encriptado con exito')
             
