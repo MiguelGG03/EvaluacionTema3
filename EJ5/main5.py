@@ -6,7 +6,7 @@ def sl():
 
 def main5():
     h='hola'
-    print(int(hashlib.sha256(h.encode('utf-8')).hexdigest(),16))
+    h1=int(hashlib.sha256(h.encode('utf-8')).hexdigest(),16)
     mensaje=input('Mensaje a encriptar\n>>>')
     encript=Hash()
     tabla=encript.crear_tabla(len(mensaje))
@@ -27,6 +27,8 @@ def main5():
     print('Datos encriptados en lista >>> ',tabla)
     sl()
     '''Ahora toca desencriptar'''
+    h2=int(hashlib.sha256(h1.encode('utf-8')).hexdigest(),16)
+    print(h2)
 
 
 
