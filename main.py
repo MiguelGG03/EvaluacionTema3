@@ -3,8 +3,13 @@ from EJ2.main2 import main2
 from EJ3.main3 import main3
 from EJ5.main5 import main5
 from EJ4.main4 import main4
+import sys
+
 
 def main():
+
+    
+    sys.path.append('C:\\Users\\mglez\\OneDrive\\Escritorio\\GitHub\\EvaluacionTema3\\EJ3\\clasesej3.py')
     pr1=input('Que ejercicio deseas ver (1,2,3,4,5): ')
 
     if pr1=='1':
@@ -19,3 +24,6 @@ def main():
         main5()
     else:
         print('Respuesta incorrecta')
+
+if __name__=='__main__':
+    main()
