@@ -8,8 +8,6 @@ import sys
 
 def main():
 
-    
-    sys.path.append('C:\\Users\\mglez\\OneDrive\\Escritorio\\GitHub\\EvaluacionTema3\\EJ3\\clasesej3.py')
     pr1=input('Que ejercicio deseas ver (1,2,3,4,5): ')
 
     if pr1=='1':
@@ -24,6 +22,8 @@ def main():
         main5()
     else:
         print('Respuesta incorrecta')
+
+
 
 if __name__=='__main__':
     main()
