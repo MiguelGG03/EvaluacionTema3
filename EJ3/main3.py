@@ -1,4 +1,4 @@
-from clasesej3 import (HalconMilenario,EstrellaDeLaMuerte)
+from EJ3.clasesej3 import (HalconMilenario,EstrellaDeLaMuerte)
 
 def listador_trip(lista):
     cont=1000000

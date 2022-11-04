@@ -1,5 +1,5 @@
 import hashlib
-from tablas_hash import Hash
+from EJ5.tablas_hash import Hash
 
 def valido(caracter):
     if(ord(caracter)<32 or ord(caracter)>125):
